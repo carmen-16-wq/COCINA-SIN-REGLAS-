@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COCINA SIN REGLAS </title>
+  <style>
+    body {
+      font-family:'Times New Roman', Times, serif;
+      background: #fffaf0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .recipe-image {
+      width: 100%;
+      height: 200px;
+      background-color: #eee;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 2px solid #ffd6d6;
+    }
+
+    .recipe-content {
+      padding: 1.5rem;
+    }
+
+    .recipe-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #d14b57;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    /* Inicio */
+    .inicio {
+      background-color: #fff0f5;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .inicio h2 {
+      color: #d14b57;
+    }
+
+    .inicio p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    /* Comentarios */
+    .comentarios {
+      background-color: #fefefe;
+      padding: 2rem 1rem;
+      border-top: 2px solid #ffc0cb;
+    }
+
+    .comentarios h2 {
+      text-align: center;
+      color: #d14b57;
+    }
+
+    .comentarios form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .comentarios input,
+    .comentarios textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    .comentarios button {
+      padding: 10px 20px;
+      background-color: #d14b57;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>COCINA SIN REGLAS</h1>
+  <p>Explora nuestras recetas y descubre nuevos sabores</p>
+</header>
+
+<!-- SECCIÓN INICIO -->
+<section class="inicio">
+  <h2>Bienvenid@ a nuestro recetario</h2>
+  <p>
+    Aquí encontrarás una cuidada selección de recetas deliciosas, fáciles y rápidas para sorprender a tu familia y amigos. ¡Disfruta cocinando y no olvides compartir tus favoritas!
+  </p>
+</section>
+
+<!-- RECETAS -->
+<main class="container">
+
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Tarta\ de\ manzana.jpg');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Tarta de Manzana</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>2 manzanas</li>
+        <li>1 lámina de masa quebrada</li>
+        <li>2 cdas de azúcar</li>
+        <li>1 cdta de canela</li>
+        <li>1 huevo (para pintar)</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Precalienta el horno a 180°C.</li>
+        <li>Coloca la masa en un molde y pincha la base.</li>
+        <li>Acomoda las manzanas en láminas y espolvorea azúcar y canela.</li>
+        <li>Pinta con huevo batido y hornea por 30 minutos.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- 2. Ensalada Mediterránea -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Ensalada\ Mediterranea.webp');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Ensalada Mediterránea</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>1 tomate</li>
+        <li>1/2 pepino</li>
+        <li>1/4 cebolla morada</li>
+        <li>Queso feta</li>
+        <li>Aceite de oliva, sal y orégano</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Corta los ingredientes en cubos.</li>
+        <li>Mezcla todo en un bol.</li>
+        <li>Aliña con aceite, sal y orégano.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- 3. Pasta Alfredo -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Pasta\ Alfredo.webp');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Pasta Alfredo</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>200g de pasta</li>
+        <li>100ml de crema</li>
+        <li>1 diente de ajo</li>
+        <li>Queso parmesano</li>
+        <li>Mantequilla y sal</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Hierve la pasta al dente.</li>
+        <li>Sofríe ajo en mantequilla y añade crema.</li>
+        <li>Agrega el parmesano y mezcla con la pasta.</li>
+      </ol>
+    </div>
+  </div>
+
+<!-- 4. Panqueques -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Panqueques.webp');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Panqueques Caseros</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>1 taza de harina</li>
+        <li>1 huevo</li>
+        <li>1 taza de leche</li>
+        <li>1 cda de azúcar</li>
+        <li>1 cdta de mantequilla</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Mezcla todos los ingredientes hasta obtener una masa homogénea.</li>
+        <li>Cocina en una sartén antiadherente por ambos lados.</li>
+      </ol>
+    </div>
+  </div>
+ <!-- 5. Pollo al horno -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Pollo\ al\ horno.webp');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Pollo al Horno</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>1 muslo de pollo</li>
+        <li>Papas</li>
+        <li>Sal, ajo y orégano</li>
+        <li>Aceite de oliva</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Precalienta el horno a 200°C.</li>
+        <li>Condimenta el pollo y las papas, rocía con aceite.</li>
+        <li>Hornea por 40-50 minutos.</li>
+      </ol>
+    </div>
+  </div>
+<!-- 6. Smoothie de Fresa -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Licuado\ de\ fresa.webp');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Smoothie de Fresa</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>1 taza de fresas</li>
+        <li>1 banana</li>
+        <li>1 taza de leche o yogurt</li>
+        <li>Miel al gusto</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Lava las frutas.</li>
+        <li>Licúa todo hasta obtener una mezcla cremosa.</li>
+      </ol>
+    </div>
+  </div>
+<!-- 7. Arroz con Leche -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Arroz\ con\ leche.jpg');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Arroz con Leche</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>1 taza de arroz</li>
+        <li>1 litro de leche</li>
+        <li>1 rama de canela</li>
+        <li>1/2 taza de azúcar</li>
+        <li>Cáscara de limón</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Hierve el arroz con agua por 10 min, escurre.</li>
+        <li>Agrega leche, canela y cáscara.</li>
+        <li>Cocina a fuego bajo 30-40 min, añade azúcar.</li>
+      </ol>
+    </div>
+  </div>
+ <!-- 8. Guacamole -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Guacamole.jpg');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Guacamole Casero</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>2 aguacates</li>
+        <li>1 tomate</li>
+        <li>Cilantro</li>
+        <li>1/4 cebolla</li>
+        <li>Jugo de 1 limón</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Tritura el aguacate y mezcla con el resto picado.</li>
+        <li>Añade limón, sal y mezcla bien.</li>
+      </ol>
+    </div>
+  </div>
+<!-- 9. Hamburguesa Casera -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Hamburguesa.jpg');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Hamburguesa Casera</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>Carne molida</li>
+        <li>Pan de hamburguesa</li>
+        <li>Queso, lechuga, tomate</li>
+        <li>Sal, pimienta</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Forma las hamburguesas con sal y pimienta.</li>
+        <li>Cocina en sartén o parrilla.</li>
+        <li>Arma con pan y vegetales.</li>
+      </ol>
+    </div>
+  </div>
+
+<!-- 10. Galletas de Avena -->
+  <div class="recipe-card">
+    <div class="recipe-image" style="background-image: url('Galletas\ de\ avena.jpg');"></div>
+    <div class="recipe-content">
+      <h2 class="recipe-title">Galletas de Avena</h2>
+      <p class="section-title">Ingredientes:</p>
+      <ul>
+        <li>1 taza de avena</li>
+        <li>1/2 taza de azúcar</li>
+        <li>1 huevo</li>
+        <li>2 cdas de mantequilla</li>
+        <li>1 cdta de esencia de vainilla</li>
+      </ul>
+      <p class="section-title">Preparación:</p>
+      <ol>
+        <li>Mezcla todos los ingredientes.</li>
+        <li>Forma bolitas y hornea 15 min a 180°C.</li>
+      </ol>
+    </div>
+  </div>
+
+
+</main>
+
+<!-- SECCIÓN DE COMENTARIOS -->
+<section class="comentarios">
+  <h2>Comentarios</h2>
+  <form>
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="comentario">Tu comentario:</label><br>
+    <textarea id="comentario" name="comentario" rows="5" required></textarea><br>
+
+    <button type="submit">Enviar Comentario</button>
+  </form>
+</section>
+
+</body>
+</html>
